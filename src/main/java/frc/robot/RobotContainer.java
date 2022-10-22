@@ -28,7 +28,7 @@ public class RobotContainer {
   public static XboxController controller = new XboxController(0);
   public static Joystick joystick = new Joystick(1);
 
-  public static JoystickButton bButton = new JoystickButton(joystick, 1); // Change 1 later
+  public static JoystickButton bButton = new JoystickButton(joystick, 2); // Change 2 later
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
