@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.commands.ExampleCommand;
+import frc.robot.subsystems.Climber;
 import frc.robot.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.InstantCommand;
@@ -22,13 +23,17 @@ import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
+  private final Climber climber = new Climber();
 
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
 
   public static XboxController controller = new XboxController(0);
   public static Joystick joystick = new Joystick(1);
 
-  public static JoystickButton bButton = new JoystickButton(joystick, 2); // Change 2 later
+  public static JoystickButton xButton = new JoystickButton(joystick, 3);
+  public static JoystickButton aButton = new JoystickButton(joystick, 1);
+  public static JoystickButton bButton = new JoystickButton(joystick, 2);
+  public static JoystickButton yButton = new JoystickButton(joystick, 4);
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
@@ -43,7 +48,8 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
-    
+    // yButton.whenPressed()
+    // aButton.whenPressed()
   }
 
   /**
