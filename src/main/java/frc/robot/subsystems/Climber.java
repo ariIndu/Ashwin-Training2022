@@ -25,14 +25,19 @@ public class Climber extends SubsystemBase {
     rclimberEncoder = rclimberMotor.getEncoder();
   }
 
-  public void climberUp() {
+  public void up() {
     lclimberMotor.set(-1.0);
     rclimberMotor.set(1.0);
   }
 
-  public void climberDown() {
+  public void down() {
     lclimberMotor.set(1.0);
     rclimberMotor.set(-1.0);
+  }  
+
+  public void stop() {
+    lclimberMotor.set(0);
+    rclimberMotor.set(0);
   }
 
   @Override

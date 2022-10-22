@@ -48,8 +48,8 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
-    // yButton.whenPressed()
-    // aButton.whenPressed()
+    yButton.whenPressed(new Climb)
+    aButton.whenPressed()
   }
 
   /**
