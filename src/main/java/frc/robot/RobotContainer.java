@@ -9,6 +9,8 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.subsystems.Climber;
+import frc.robot.commands.Climb.climberState;
+import frc.robot.commands.Climb;
 import frc.robot.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.InstantCommand;
@@ -48,8 +50,9 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
-    yButton.whenPressed(new Climb)
-    aButton.whenPressed()
+    yButton.whenPressed(new Climb(climber, climberState.UP));
+    aButton.whenPressed(new Climb(climber, climberState.DOWN));
+    xButton.whenPressed(new Climb(climber, climberState.STOP));
   }
 
   /**
